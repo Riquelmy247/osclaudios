@@ -1,0 +1,4 @@
+# Vídeos do grupo.
+# Exemplos: hero.mp4, video-01.mp4
+# Depois registre os caminhos em src/data/data.js
+# Prefira MP4 (H.264) para melhor compatibilidade.

@@ -1,0 +1,54 @@
+import { getWhatsAppUrl, publicUrl, siteData } from "../data/data";
+import Button from "../components/Button";
+import Reveal from "../components/Reveal";
+
+export default function About() {
+  const photos = siteData.media.aboutPhotos;
+
+  return (
+    <section className="section" id="sobre">
+      <div className="container about-grid">
+        <Reveal className="about-visual">
+          <div className="frame frame-main">
+            <img
+              src={publicUrl(photos.main)}
+              alt="Claudio, Os Claudios"
+              loading="lazy"
+            />
+            <div className="frame-caption">
+              <b>PAI</b>
+              <span>Os Claudios</span>
+            </div>
+          </div>
+          <div className="frame frame-side">
+            <img
+              src={publicUrl(photos.secondary)}
+              alt="Os Claudios"
+              loading="lazy"
+            />
+            <div className="frame-caption">
+              <b>FILHO</b>
+              <span>Pagode</span>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal className="about-copy" delay={120}>
+          <p className="kicker">{siteData.about.kicker}</p>
+          <h2 className="section-title">
+            Pai e filho,
+            <span>uma paixão pelo pagode</span>
+          </h2>
+          {siteData.about.paragraphs.map((text) => (
+            <p className="section-text" key={text}>
+              {text}
+            </p>
+          ))}
+          <Button href={getWhatsAppUrl("hire")} target="_blank">
+            {siteData.labels.hire}
+          </Button>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
