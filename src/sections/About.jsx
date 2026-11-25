@@ -6,7 +6,7 @@ export default function About() {
   const photos = siteData.media.aboutPhotos;
 
   return (
-    <section className="section" id="sobre">
+    <section className="section about" id="sobre">
       <div className="container about-grid">
         <Reveal className="about-visual">
           <div className="frame frame-main">
@@ -20,23 +20,16 @@ export default function About() {
               <span>Os Claudios</span>
             </div>
           </div>
-          <div className="frame frame-side">
-            <img
-              src={publicUrl(photos.secondary)}
-              alt="Os Claudios"
-              loading="lazy"
-            />
-            <div className="frame-caption">
-              <b>FILHO</b>
-              <span>Pagode</span>
-            </div>
-          </div>
+          <p className="about-badge">
+            <span>Pagode</span>
+            <strong>em família</strong>
+          </p>
         </Reveal>
 
         <Reveal className="about-copy" delay={120}>
           <p className="kicker">{siteData.about.kicker}</p>
           <h2 className="section-title">
-            Pai e filho,
+            Pai e filhos,
             <span>uma paixão pelo pagode</span>
           </h2>
           {siteData.about.paragraphs.map((text) => (

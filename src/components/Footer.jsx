@@ -20,9 +20,6 @@ export default function Footer() {
         </div>
 
         <div className="footer-links">
-          <a href={siteData.production.url} target="_blank" rel="noopener noreferrer">
-            {siteData.labels.production} {siteData.production.instagram}
-          </a>
           {siteData.nav.map((item) => (
             <a key={item.id} href={item.href}>
               {item.label}

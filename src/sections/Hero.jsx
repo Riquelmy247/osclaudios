@@ -57,7 +57,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-inner">
-        <p className="hero-badge">Pai e Filho no palco</p>
+        <p className="hero-badge">Pai e filhos no palco</p>
         <h1 className="sr-only">{siteData.name}</h1>
         <img
           className="hero-logo"
@@ -76,6 +76,11 @@ export default function Hero() {
           </Button>
         </div>
       </div>
+
+      <a className="scroll-hint" href="#sobre">
+        Role
+        <i />
+      </a>
 
       {!hasMedia ? <span className="sr-only">Hero preparado para receber foto ou vídeo em data.js</span> : null}
     </section>

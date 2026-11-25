@@ -79,7 +79,7 @@
 
 .header.is-scrolled,
 .header.is-open {
-  background: rgba(5, 5, 5, 0.86);
+  background: rgba(4, 8, 20, 0.88);
   border-bottom-color: var(--line);
   backdrop-filter: blur(16px);
 }
@@ -409,7 +409,7 @@ button.menu-toggle span::after {
   right: 0;
   bottom: 0;
   z-index: 36;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 0;
   padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
   background: rgba(4, 8, 20, 0.96);
@@ -440,6 +440,10 @@ button.menu-toggle span::after {
   color: var(--red-2);
 }
 
+.bottom-nav a.is-whatsapp {
+  color: #25d366;
+}
+
 @media (max-width: 979px) {
   .bottom-nav {
     display: grid;
@@ -450,7 +454,7 @@ button.menu-toggle span::after {
   }
 
   .wa-float {
-    bottom: calc(88px + env(safe-area-inset-bottom));
+    display: none;
   }
 
   .footer {

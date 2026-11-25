@@ -21,14 +21,14 @@
 
 export const siteData = {
   name: "Os Claudios",
-  slogan: "A melhor dupla do Pagode 🎤🎵",
-  description: "Formado por Pai e Filho 🎤",
+  slogan: "A família do Pagode 🎤🎵",
+  description: "Formada por pai e filhos 🎤",
   phrase: "Venha curtir o melhor do pagode",
 
   seo: {
-    title: "Os Claudios | A Melhor Dupla do Pagode",
+    title: "Os Claudios | A Família do Pagode",
     description:
-      "Os Claudios — A melhor dupla do pagode. Formado por pai e filho. Entre em contato e contrate para seu evento.",
+      "Os Claudios é uma família de pagode formada por pai e filhos. Entre em contato e contrate para seu evento.",
   },
 
   /* URL pública do site, se houver. Usada em Open Graph. */
@@ -41,7 +41,7 @@ export const siteData = {
     kicker: "Instagram",
     title: "Acompanhe Os Claudios",
     text: "Confira nossos shows, bastidores e novidades no Instagram.",
-    profileSubtitle: "A melhor dupla do Pagode",
+    profileSubtitle: "A família do Pagode",
   },
 
   contact: {
@@ -49,11 +49,6 @@ export const siteData = {
     phoneLink: "tel:+5534999233936",
     whatsappNumber: "5534999233936",
     responsible: "Claudio",
-  },
-
-  production: {
-    instagram: "@claudin_filho",
-    url: "https://www.instagram.com/claudin_filho/",
   },
 
   nav: [
@@ -68,6 +63,7 @@ export const siteData = {
     { label: "Sobre", shortLabel: "Sobre", href: "#sobre", icon: "about" },
     { label: "Instagram", shortLabel: "Insta", href: "#instagram", icon: "instagram" },
     { label: "Contato", shortLabel: "Contato", href: "#contato", icon: "contact" },
+    { label: "WhatsApp", shortLabel: "Whats", href: "whatsapp", icon: "whatsapp", external: true },
   ],
 
   labels: {
@@ -79,7 +75,6 @@ export const siteData = {
     followInstagram: "SEGUIR NO INSTAGRAM",
     instagram: "INSTAGRAM",
     shows: "Shows",
-    production: "Produção",
   },
 
   whatsapp: {
@@ -90,9 +85,9 @@ export const siteData = {
 
   about: {
     kicker: "Quem são Os Claudios?",
-    title: "Pai e filho, uma paixão pelo pagode",
+    title: "Pai e filhos, uma paixão pelo pagode",
     paragraphs: [
-      "Os Claudios são uma dupla de pagode formada por pai e filho. Unidos pela música e pela família, eles levam para o palco a alegria, a conexão e o melhor do pagode.",
+      "Os Claudios é uma família de pagode formada por pai e filhos. Unidos pela música e pela família, eles levam para o palco a alegria, a conexão e o melhor do pagode.",
       "Uma atração feita para animar festas, eventos e comemorações — com a energia de quem divide o palco e a vida.",
     ],
   },
@@ -114,7 +109,7 @@ export const siteData = {
       id: "familia",
       icon: "heart",
       title: "FAMÍLIA",
-      text: "Uma dupla formada por pai e filho, unidos pela música.",
+      text: "Uma família formada por pai e filhos, unidos pela música.",
     },
     {
       id: "energia",
@@ -184,7 +179,6 @@ export const siteData = {
 
     aboutPhotos: {
       main: "/pai.png",
-      secondary: "/filho.png",
     },
 
     photos: [

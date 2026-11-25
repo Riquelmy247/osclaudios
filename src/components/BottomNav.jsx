@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { siteData } from "../data/data";
-import { NavIcon } from "./Icons";
+import { getWhatsAppUrl, siteData } from "../data/data";
+import { NavIcon, WhatsAppIcon } from "./Icons";
 
 export default function BottomNav() {
   const items = siteData.mobileNav || [];
@@ -14,6 +14,7 @@ export default function BottomNav() {
     const observe = () => {
       observer?.disconnect();
       const sections = items
+        .filter((item) => item.href.startsWith("#"))
         .map((item) => document.querySelector(item.href))
         .filter(Boolean);
 
@@ -44,17 +45,26 @@ export default function BottomNav() {
 
   return (
     <nav className="bottom-nav" aria-label="Menu inferior">
-      {items.map((item) => (
-        <a
-          key={item.href}
-          href={item.href}
-          className={active === item.href ? "is-active" : undefined}
-          onClick={() => setActive(item.href)}
-        >
-          <NavIcon name={item.icon} />
-          <span>{item.shortLabel || item.label}</span>
-        </a>
-      ))}
+      {items.map((item) => {
+        const external = Boolean(item.external);
+        const href = external ? getWhatsAppUrl("default") : item.href;
+
+        return (
+          <a
+            key={item.href}
+            href={href}
+            className={external ? "is-whatsapp" : active === item.href ? "is-active" : undefined}
+            target={external ? "_blank" : undefined}
+            rel={external ? "noopener noreferrer" : undefined}
+            onClick={() => {
+              if (!external) setActive(item.href);
+            }}
+          >
+            {item.icon === "whatsapp" ? <WhatsAppIcon size={20} /> : <NavIcon name={item.icon} />}
+            <span>{item.shortLabel || item.label}</span>
+          </a>
+        );
+      })}
     </nav>
   );
 }

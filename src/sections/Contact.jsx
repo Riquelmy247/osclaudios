@@ -23,11 +23,6 @@ export default function Contact() {
             <strong>{siteData.instagram.username}</strong>
             <p>Shows, bastidores e novidades</p>
           </a>
-          <a className="contact-card" href={siteData.production.url} target="_blank" rel="noopener noreferrer">
-            <span>{siteData.labels.production}</span>
-            <strong>{siteData.production.instagram}</strong>
-            <p>Produção</p>
-          </a>
         </div>
 
         <div className="contact-actions">
